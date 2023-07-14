@@ -1,4 +1,7 @@
 class Solution {
+    // Example :- s :egg t: add //True
+    //Example :- s: egga t: pddp //False
+    //Example :- s: boothb t: psiaqp // False
     public boolean isIsomorphic(String s, String t) {
         //Using a hashmap and a hashset solution
         HashMap<Character, Character> hmap= new HashMap<>();
