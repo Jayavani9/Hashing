@@ -9,3 +9,4 @@ All occurrences of a character must be replaced with another character while pre
 The solution is given in 2 ways:
 1. Using 2 Hashmaps.
 2. Using a HashMap and a HashSet.
+3. Using a single HashMap
