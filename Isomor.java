@@ -1,34 +1,52 @@
-//Checking if 2 string are isomorphic or not with the help of 2 HashMap's.
 class Solution {
     public boolean isIsomorphic(String s, String t) {
-        HashMap<Character, Character> smap = new HashMap<>();
-        HashMap<Character, Character> tmap = new HashMap<>();
+        //Using a hashmap and a hashset solution
+        HashMap<Character, Character> hmap= new HashMap<>();
+        HashSet<Character> hset = new HashSet<>();
+        for(int i = 0 ; i < s.length();i++)
+        {
+            char schar = s.charAt(i);
+            char tchar = t.charAt(i);
+            if(hmap.containsKey(schar))
+            {
+                if(hmap.get(schar) !=tchar) return false;
+            }
+            else
+            {
+                if(hset.contains(tchar)) return false;
+                hmap.put(schar, tchar);
+                hset.add(tchar);
+            }
+
+        }
+        //Using 2 hashmaps solution
+        /*
+        HashMap<Character, Character> smap= new HashMap<>();
+        HashMap<Character, Character> tmap= new HashMap<>();
         if(s.length() != t.length()) return false;
         for(int i = 0 ; i < s.length();i++)
         {
-            char cs = s.charAt(i);
-            char ct = t.charAt(i);
-            if(smap.containsKey(cs))
+            char schar = s.charAt(i);
+            char tchar = t.charAt(i);
+            if(smap.containsKey(schar))
             {
-                if(smap.get(cs) != ct) 
-                {
-                    return false;
-                }
+                if(smap.get(schar) != tchar) return false;
             }
-            else 
+            else
             {
-                smap.put(cs,ct);
+                smap.put(schar,tchar);
             }
-            if(tmap.containsKey(ct))
+            if(tmap.containsKey(tchar))
             {
-                if(tmap.get(ct) != cs) return false;
+                if(tmap.get(tchar) != schar) return false;
             }
-                else 
-                {
-                    tmap.put(ct,cs);
-                }
-
+            else
+            {
+                tmap.put(tchar,schar);
+            }
         }
         return true;
+       */
+       return true;
     }
 }
