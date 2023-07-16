@@ -18,3 +18,11 @@ The solution is given in 3 ways:
 1. Using a HashSet // Tc: o(n); sc: o(n)
 2. Using the sum of numbers concept // Tc: o(n); sc: o(1)
 3. Using sort and check in range // Tc: o(nlogn); sc: o(1)
+
+TwoSum.java contains the solution to 
+1. Two Sum
+Given an array of integer nums and an integer target, return indices of the two numbers such that they add up to target.
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+You can return the answer in any order.
+
+The solution is given by using a single HashMap with time and space complexities being o(n) each.
