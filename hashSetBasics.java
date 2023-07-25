@@ -4,7 +4,8 @@ import java.util.*;
 public class hashSetBasics {
     public static void main(String args[])
     {
-
+        
+        //Create a hashset of type String 
         HashSet<String> set = new HashSet<String>();
   
         //add method to add elements into the hashset. Returns false if already the ele is present in the set.
