@@ -16,7 +16,7 @@ public class hashSetBasics {
         set.add("A"); //Cannot insert as already present
         System.out.println(set);
         set.clear(); //Clears the elements inside the set
-        System.out.println(set);
+        System.out.println(set); //Prints the elements of the set
         set.add("A");
         set.add("B");
         set.add("C");
