@@ -12,6 +12,7 @@ Input: pattern = "abba", s = "dog cat cat fish"
 Output: false
 
 class Solution {
+  //Tc: O(m+n) and Sc: O(m+n)
   public boolean wordPattern(String pattern, String s) {
         String words[] = s.split(" ");
         if (pattern.length() != words.length) {
