@@ -20,6 +20,7 @@ class Program {
 
   public static boolean generateDocument(String characters, String document) {
     // Write your code here.
+    // Tc: O(n) and Sc: O(n)
    HashMap<Character, Integer> map = new HashMap<>();
     for (int i = 0; i < characters.length(); i++) {
       map.put(characters.charAt(i), map.getOrDefault(characters.charAt(i), 0) + 1);
