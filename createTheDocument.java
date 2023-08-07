@@ -15,4 +15,22 @@ document = "AlgoExpert is the Best!"
   
 Sample Output
 true
-    
+
+class Program {
+
+  public static boolean generateDocument(String characters, String document) {
+    // Write your code here.
+   HashMap<Character, Integer> map = new HashMap<>();
+    for (int i = 0; i < characters.length(); i++) {
+      map.put(characters.charAt(i), map.getOrDefault(characters.charAt(i), 0) + 1);
+    }
+    for (int i = 0; i < document.length(); i++) {
+      if (!map.containsKey(document.charAt(i)) || map.get(document.charAt(i)) == 0) {
+        return false;
+      }
+      map.put(document.charAt(i), map.get(document.charAt(i)) - 1);
+    }
+    return true;
+  }
+}
+
