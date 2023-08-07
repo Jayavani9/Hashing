@@ -11,3 +11,26 @@ words = ["diaper", "abc", "test", "cba", "repaid"]
     
 Sample Output
 [["diaper", "repaid"], ["abc", "cba"]]
+
+class Program {
+  public static ArrayList<ArrayList<String>> semordnilap(String[] words) {
+    // Write your code here.
+    //
+     ArrayList<ArrayList<String>> pairs = new ArrayList<>();
+     Map<String, String> seen = new HashMap<>();
+     for(String word:words)
+     {
+         String rev = new StringBuilder(word).reverse().toString();
+         if(seen.containsKey(rev))
+         {
+             ArrayList<String> pair = new ArrayList<>();
+             pair.add(seen.get(rev));
+             pair.add(word);
+             pairs.add(pair);
+         }
+         seen.put(word, rev);
+     }
+    
+    return pairs;
+  }
+}
