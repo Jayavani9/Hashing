@@ -15,7 +15,7 @@ Sample Output
 class Program {
   public static ArrayList<ArrayList<String>> semordnilap(String[] words) {
     // Write your code here.
-    //
+    //Tc: O(m*n) where m = avg length of words and n = no of words;Sc: O(n) 
      ArrayList<ArrayList<String>> pairs = new ArrayList<>();
      Map<String, String> seen = new HashMap<>();
      for(String word:words)
