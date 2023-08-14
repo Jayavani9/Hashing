@@ -13,7 +13,7 @@ Input: nums = [2,2,1,1,1,2,2]
 Output: 2
 */
 class Solution {
-    // Tc: O(n) and Sc:O(n)
+    // Time Complexity: O(n) and Sc:O(n)
     public int majorityElement(int[] nums) {
         HashMap<Integer, Integer> map = new HashMap<>();
         for(int i = 0 ; i < nums.length;i++)
