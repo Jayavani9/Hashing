@@ -1,7 +1,7 @@
 class Solution {
     public int missingNumber(int[] nums) {
 
-        //Using a hashset where time complexity : o(n) and space : o(n)
+        //Using a hashset where time complexity : o(n) and Space Complexity : o(n)
         HashSet<Integer> hset = new HashSet<>();
         for(int i = 0 ; i < nums.length;i++)
         {
