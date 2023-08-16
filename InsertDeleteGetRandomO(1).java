@@ -26,7 +26,7 @@ randomizedSet.insert(2); // 2 was already in the set, so return false.
 randomizedSet.getRandom(); // Since 2 is the only number in the set, getRandom() will always return 2.
 */
 
-Tc: O(1) for all the operations on an average
+Time complexity: O(1) for all the operations on an average
 class RandomizedSet {
 
     HashSet<Integer> set;
