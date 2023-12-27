@@ -52,6 +52,9 @@ class RandomizedSet {
             return false;
         }
         set.remove(val);
+        //ArrayList remove method expects an index value
+        //In order to remove an element with value;
+        //Use Integer.valueOf(val)
         arr.remove(Integer.valueOf(val));
         return true;
     }
