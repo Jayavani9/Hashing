@@ -46,7 +46,7 @@ class Solution {
 
 
 
-//Other way
+//Other way (Using a String Builder and not passing digits each time to the function as it is a constant)
 
 class Solution {
      HashMap<Character, String> map = new HashMap<>();
@@ -92,7 +92,7 @@ class Solution {
 }
 
 
-
+//Using a string
 class Solution {
      HashMap<Character, String> map = new HashMap<>();
       private List<String> ans;
@@ -117,16 +117,16 @@ class Solution {
     }
 
       private void backtrack(String cur,int index) {
-        if (index == digits.length()) {
+        if (index == dig.length()) {
             ans.add(cur);
             return;
         }
 
-        String letters = map.get(digits.charAt(index));
+        String letters = map.get(dig.charAt(index));
 
         for (int i = 0; i < letters.length(); i++) {
             char letter = letters.charAt(i);
-            backtrack(cur + letterndex + 1);
+            backtrack(cur + letter, index + 1);
        
         }
       }
