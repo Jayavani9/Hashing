@@ -42,3 +42,51 @@ class Solution {
         }
       }
 }
+
+
+
+
+//Other way
+
+class Solution {
+     HashMap<Character, String> map = new HashMap<>();
+      private List<String> ans;
+      String dig;
+    public List<String> letterCombinations(String digits) {
+        dig = digits;
+        map.put('2', "abc");
+        map.put('3', "def");
+        map.put('4', "ghi");
+        map.put('5', "jkl");
+        map.put('6', "mno");
+        map.put('7', "pqrs");
+        map.put('8', "tuv");
+        map.put('9', "wxyz");
+        ans = new ArrayList<>();
+        if (digits == null || digits.length() == 0) {
+            return ans;
+        }
+        backtrack(new StringBuilder(),0);
+        return ans;
+        
+    }
+
+      private void backtrack(StringBuilder cur,int index) {
+
+        if (index == dig.length()) {
+            ans.add(cur.toString());
+            return;
+        }
+
+        String letters = map.get(dig.charAt(index));
+
+
+        for (char letter : letters.toCharArray()) {
+
+            cur.append(letter);
+ 
+            backtrack(cur,index + 1);
+            cur.deleteCharAt(cur.length() - 1);
+        }
+      }
+}
