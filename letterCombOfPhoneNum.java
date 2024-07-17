@@ -90,3 +90,44 @@ class Solution {
         }
       }
 }
+
+
+
+class Solution {
+     HashMap<Character, String> map = new HashMap<>();
+      private List<String> ans;
+      String dig;
+    public List<String> letterCombinations(String digits) {
+        dig = digits;
+        map.put('2', "abc");
+        map.put('3', "def");
+        map.put('4', "ghi");
+        map.put('5', "jkl");
+        map.put('6', "mno");
+        map.put('7', "pqrs");
+        map.put('8', "tuv");
+        map.put('9', "wxyz");
+        ans = new ArrayList<>();
+        if (digits == null || digits.length() == 0) {
+            return ans;
+        }
+        backtrack("",0);
+        return ans;
+        
+    }
+
+      private void backtrack(String cur,int index) {
+        if (index == digits.length()) {
+            ans.add(cur);
+            return;
+        }
+
+        String letters = map.get(digits.charAt(index));
+
+        for (int i = 0; i < letters.length(); i++) {
+            char letter = letters.charAt(i);
+            backtrack(cur + letterndex + 1);
+       
+        }
+      }
+}
