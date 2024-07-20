@@ -30,7 +30,7 @@ class Solution {
 }
 
 
-/* Sorting O(nlogn)
+/* Sorting Tc: O(nlogn)
  Arrays.sort(nums);
         for(int i = 0; i < nums.length-1; i++)
         {
@@ -39,7 +39,8 @@ class Solution {
        
         return false;
         */
-/* Linear Search O(n^2)
+
+/* Linear Search Tc: O(n^2)
  for(int i = 0 ; i < nums.length-1; i++)
         {
             for(int j = i+1 ; j < nums.length;j++)
