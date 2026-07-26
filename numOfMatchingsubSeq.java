@@ -1,5 +1,5 @@
 792. Number of Matching Subsequences
-Tc: O(n) Sc: O(n)
+Tc: O(n + Tlogn) Sc: O(n)
   class Solution {
 
     public int numMatchingSubseq(String s, String[] words) {
